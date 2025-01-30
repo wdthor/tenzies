@@ -1,7 +1,20 @@
 import "./dice.css";
 
-const Dice = ({ value }: { value: number }) => {
-  return <button className="dice">{value}</button>;
+interface DiceProps {
+  value: number;
+  isHeld: boolean;
+  id: string;
+  holdOneDice: (id: string) => void;
+}
+const Dice: React.FC<DiceProps> = ({ value, isHeld, id, holdOneDice }) => {
+  return (
+    <button
+      className={`dice ${isHeld ? "dice dice-held" : ""}`}
+      onClick={() => holdOneDice(id)}
+    >
+      {value}
+    </button>
+  );
 };
 
 export default Dice;

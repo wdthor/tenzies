@@ -6,7 +6,7 @@
   justify-self: center;
   font-size: 1.75rem;
   font-weight: 700;
-  font-family: "Karla" Inter, sans-serif;
+  font-family: "Karla", Inter, sans-serif;
   width: 3.15rem;
   height: 3.15rem;
   border: none;
@@ -14,4 +14,8 @@
   box-shadow: 0px 2px 2px 0px #00000026;
   cursor: pointer;
   user-select: none;
+}
+
+.dice-held {
+  background-color: #59e391;
 }
