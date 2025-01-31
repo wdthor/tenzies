@@ -11,6 +11,8 @@ const Dice: React.FC<DiceProps> = ({ value, isHeld, id, holdOneDice }) => {
     <button
       className={`dice ${isHeld ? "dice dice-held" : ""}`}
       onClick={() => holdOneDice(id)}
+      aria-pressed={isHeld}
+      aria-label={`Dice with value ${value} : ${isHeld ? "held" : "not held"}`}
     >
       {value}
     </button>
