@@ -58,7 +58,7 @@ const App = () => {
   ));
   return (
     <main>
-      {gameWon ? <Confetti /> : null}
+      {gameWon ? <Confetti recycle={false} numberOfPieces={1000} /> : null}
       <div aria-live="polite" className="sr-only">
         {gameWon && (
           <p>Congratulations! You won! Press "New Game" to start again.</p>
